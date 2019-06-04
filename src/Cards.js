@@ -1,5 +1,5 @@
 import React from "react";
-import FlashCard from "./FlashCard"
+import Card from "./Card"
 import { Card as C, Icon, Image, Button} from 'semantic-ui-react';
 
 const Cards = ({flashCards}) => (
@@ -7,7 +7,7 @@ const Cards = ({flashCards}) => (
     <C.Description>
       <C>
         <C.Content>
-        <Image floated='right' size='mini' src="./images/" />
+        <Image floated='right' size='mini' src='./images/flashcards.png' />
           <C.Header>Question:</C.Header>
           <C.Description>
             {card.cardFront}
