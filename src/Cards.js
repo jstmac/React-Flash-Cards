@@ -1,16 +1,15 @@
 import React from "react";
 import { Card, Icon, Image, Button} from 'semantic-ui-react';
 
-const Cards = ({cards}) => (
-  
+const Cards = ({flashCards}) => (
+    flashCards.map(card => ( 
     <Card.Group>
       <Card>
         <Card.Content>
-          <Image floated='right' size='mini' src='/images/avatar/large/steve.jpg' />
+        <Image floated='right' size='mini' src='/images/avatar/large/steve.jpg' />
           <Card.Header>Question:</Card.Header>
-          <Card.Meta></Card.Meta>
           <Card.Description>
-            {Card.cardFront}
+            {card.cardFront}
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
@@ -27,12 +26,13 @@ const Cards = ({cards}) => (
       </Card>
     </Card.Group>
   )
-  
-  
+   )
+   )
 
 
 
 
 
 
-export default Cards;
+
+export default Cards
