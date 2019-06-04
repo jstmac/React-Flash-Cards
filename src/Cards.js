@@ -1,18 +1,19 @@
 import React from "react";
-import { Card, Icon, Image, Button} from 'semantic-ui-react';
+import FlashCard from "./FlashCard"
+import { Card as C, Icon, Image, Button} from 'semantic-ui-react';
 
 const Cards = ({flashCards}) => (
     flashCards.map(card => ( 
-    <Card.Group>
-      <Card>
-        <Card.Content>
-        <Image floated='right' size='mini' src='/images/avatar/large/steve.jpg' />
-          <Card.Header>Question:</Card.Header>
-          <Card.Description>
+    <C.Description>
+      <C>
+        <C.Content>
+        <Image floated='right' size='mini' src="./images/" />
+          <C.Header>Question:</C.Header>
+          <C.Description>
             {card.cardFront}
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
+          </C.Description>
+        </C.Content>
+        <C.Content extra>
           <div className='ui two buttons'>
             <Button basic color='green'>
               Approve
@@ -22,9 +23,9 @@ const Cards = ({flashCards}) => (
             </Button>
           </div>
       
-        </Card.Content>
-      </Card>
-    </Card.Group>
+        </C.Content>
+      </C>
+    </C.Description>
   )
    )
    )
