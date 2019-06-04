@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Cards from "./Cards"
+import { Container, Header, Segment, Icon, Button, } from "semantic-ui-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state= {
+    cards: [
+      { id: 1, cardFront: "Question 1", cardBack: "Answer 1", },
+      { id: 2, cardFront: "Question 2", cardBack: "Answer 2", },
+      { id: 3, cardFront: "Question 3", cardBack: "Answer 3", },
+    ],
+  };
+
+
+
+  render() {
+    return (
+      <Container>
+        <Header as="h1" color="purple">React Flash Cards</Header>
+        <Cards flashCards={this.state.cards} />
+      </Container>
+    );
+  }
 }
+
+
 
 export default App;
