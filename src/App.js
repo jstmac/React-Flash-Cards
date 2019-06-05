@@ -3,9 +3,6 @@ import Cards from "./Cards"
 import FlashForm from "./FlashForm"
 import { Container, Header, Segment, Icon, Button, } from "semantic-ui-react";
 
-
-
-
 class App extends Component {
   state= {
     cards: [
@@ -25,6 +22,15 @@ class App extends Component {
     this.setState({ cards: [card, ...this.state.cards], });
   };
 
+  
+
+  removeCard = (id) => {
+    const cards = this.state.cards.filter( card => {
+      if (card.id !== id)
+        return card
+    });
+    this.setState({ cards: [...cards], });
+  };
 
 
   render() {
@@ -33,15 +39,14 @@ class App extends Component {
         <Header as="h1" color="purple">React Flash Cards</Header>
         <br />
         <FlashForm add={this.addCard} />
-        <Cards flashCards={this.state.cards} />
+        <Cards 
+        flashCards={this.state.cards}
+        remove={this.removeCard} 
+
+         />
       </Container>
     );
   }
 }
-
-
-
-
-
 
 export default App;

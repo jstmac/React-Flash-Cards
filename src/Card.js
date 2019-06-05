@@ -1,17 +1,24 @@
 import React from "react";
-import { Card as C, Icon, Image } from 'semantic-ui-react'
+import { Card as C, Icon, Button, Image } from 'semantic-ui-react'
 
-const Card = ({cardFront}) => (
+const Card = ({ id, cardFront, cardBack, remove}) => (
   <C>
-    <Image src='/images/flashcards.png' wrapped ui={false} />
+    
+  
+    
+    
+    
+    
     <C.Content>
       <C.Header>Question</C.Header>
       <C.Description>
-       {Card.cardFront}
+       {Card.cardFront})
       </C.Description>
+      <Button color="red" icon onClick={() => remove(id)}>
+        <Icon name="lemon" />
+        </Button>
     </C.Content>
     <C.Content extra>
-    
     </C.Content>
   </C>
 )

@@ -1,30 +1,28 @@
 import React from "react";
 import Card from "./Card"
-import { Card as C, Icon, Image, Button} from 'semantic-ui-react';
+import { Card as C, Image, Button, Icon,} from 'semantic-ui-react';
 
-const Cards = ({flashCards}) => (
+const Cards = ({ flashCards, remove }) => (
     flashCards.map(card => ( 
+
     <C.Description>
-      <C>
+      <C.Content>
         <C.Content>
-        <Image floated='right' size='mini' src='./images/flashcards.png' />
+        <Image  src='./images/flashcards.jpg' floated='right' size='large' />
           <C.Header>Question:</C.Header>
           <C.Description>
             {card.cardFront}
           </C.Description>
         </C.Content>
-        <C.Content extra>
-          <div className='ui two buttons'>
-            <Button basic color='green'>
-              Approve
-            </Button>
-            <Button basic color='red'>
-              Decline
-            </Button>
-          </div>
-      
+        
         </C.Content>
-      </C>
+          <Button onClick= {() => remove(card.id)} basic      color='red'>
+            Delete
+          </Button>
+          <Button basic color='blue'>
+            Edit
+          </Button>
+
     </C.Description>
   )
    )
