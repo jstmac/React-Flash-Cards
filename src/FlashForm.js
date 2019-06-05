@@ -38,7 +38,7 @@ class FlashForm extends React.Component {
             value={this.state.cardBack} 
             onChange={this.handleChange}
           />
-          <Form.Button>Submit</Form.Button>
+          <Form.Button color="yellow">Add New</Form.Button>
         </Form.Group>
       </Form>
     )  
