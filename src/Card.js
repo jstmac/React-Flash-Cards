@@ -1,5 +1,5 @@
 import React from "react";
-import { Card as C, Icon, Button, Image } from 'semantic-ui-react'
+import { Card as C, Icon, Button, } from 'semantic-ui-react'
 
 const Card = ({ id, cardFront, cardBack, remove}) => (
   <C>

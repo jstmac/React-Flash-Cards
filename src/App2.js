@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Cards from "./Cards"
 import FlashForm from "./FlashForm"
-import { Container, Header, Segment, Icon, Button, } from "semantic-ui-react";
+import { Container, Header, } from "semantic-ui-react";
 
 class App2 extends Component {
 

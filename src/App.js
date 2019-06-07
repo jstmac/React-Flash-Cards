@@ -5,7 +5,6 @@ import App2 from './App2';
 import About from './Components/About';
 import NoMatch from './Components/NoMatch';
 import NavBar from './Components/NavBar';
-// import Cards from "./Cards"
 // import FlashForm from "./FlashForm"
 import { Container, } from "semantic-ui-react";
 
