@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 ReactDOM.render(
   <Router>
-    <App />
+      <App />
   </Router>,
   document.getElementById('root')
 );

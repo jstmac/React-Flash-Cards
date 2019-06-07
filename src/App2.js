@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Route, } from 'react-router-dom';
-import Home from './Components/Home';
 import Cards from "./Cards"
 import FlashForm from "./FlashForm"
 import { Container, Header, Segment, Icon, Button, } from "semantic-ui-react";
