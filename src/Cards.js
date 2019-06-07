@@ -1,6 +1,5 @@
 import React from "react";
-import flashcards from "./images/flashcards.jpg";
-import { Card as C, Icon, Button,} from 'semantic-ui-react';
+import { Card as C, Icon, Button, Header, Segment} from 'semantic-ui-react';
 
 const Cards = ({ flashCards, remove }) => (
     flashCards.map(card => ( 
@@ -8,7 +7,7 @@ const Cards = ({ flashCards, remove }) => (
     <C.Description>
       <C.Content>
         <C.Content>
-        <Icon color='green' corner="top right" name='question circle' />
+        <Icon color='green' name='question circle' />
           <C.Header>Question:</C.Header>
           <C.Description>
             {card.cardFront}
